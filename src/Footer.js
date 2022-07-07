@@ -3,7 +3,7 @@ import Logo from './Logo.js';
 function Footer() {
     return (      
     <footer className="bg-white flex flex-row items-center justify-between">
-        <div className=" w-52 h-[25vh] text-center justify-center">
+        <div className=" w-52  text-center justify-center">
         <Logo />
         <p>Torget 1A, 3210 Sandefjord</p>
         </div>

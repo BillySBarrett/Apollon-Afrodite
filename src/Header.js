@@ -6,7 +6,7 @@ export default function Header() {
     <header className=" text-black border-b-2 border-black">
     <div className="flex justify-between items-center p-5">
         <div>
-          <Logo />
+          <Logo /> // Consider making logo into link to '/' or home page
         </div>
         <div>
           <OpenHeader />

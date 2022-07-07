@@ -1,14 +1,14 @@
 import Wave from 'react-wavify';
 
 export default function OpeningHours() {
-    return (      <div className="h-[100vh] bg-test-shoe  bg-top flex flex-col text-white justify-center items-center text-center">
-    <div className="relative -top-20">
-      <div className=" rotate-180 w-screen">
+    return (      <div className="h-[830px] bg-test-shoe  bg-top flex flex-col  text-white justify-items-center text-center">
+    <div className="">
+      <div className=" rotate-180 w-screen relative -top-2">
         <Wave fill='#FDF3DF'
           paused={false}
           options={{
-            height: 20,
-            amplitude: 25,
+            height: 50,
+            amplitude: 20,
             speed: 0.20,
             points: 3
           }}
@@ -24,6 +24,17 @@ export default function OpeningHours() {
         <li>Lørdag: 10-16</li>
         <li>Søndag: Stengt</li>
       </ul>
+      <div className=" w-screen ">
+          <Wave fill='#FDF3DF'
+            paused={false}
+            options={{
+              height: 10,
+              amplitude: 30,
+              speed: 0.18,
+              points: 4
+            }}
+          />
+        </div>
     </div>
   </div>)
 }
