@@ -12,6 +12,9 @@ module.exports = {
         extrafont: ['30px', '70px'],
       }
     },
+    fontFamily: {
+      'display': ['Roboto', 'Helvetica']
+    }
   },
   plugins: [],
 }

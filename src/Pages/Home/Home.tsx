@@ -7,7 +7,7 @@ import Landing from './Landing.js'
 function Home() {
 
   return (
-    <div className="bg-#FDF3DF font-serif">
+    <div className="bg-#FDF3DF font-display">
       <Landing />
       <OpeningHours />
       <Brands />
