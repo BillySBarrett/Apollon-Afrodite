@@ -13,7 +13,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      'display': ['Roboto', 'Helvetica']
+      'display': ['"Helvetica Neue"']
     }
   },
   plugins: [],

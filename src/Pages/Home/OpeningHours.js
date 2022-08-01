@@ -4,7 +4,7 @@ export default function OpeningHours() {
     return (      <div className="h-[830px] bg-test-shoe  bg-top flex flex-col  text-white justify-items-center text-center">
     <div className="">
       <div className=" rotate-180 w-screen relative -top-2">
-        <Wave fill='#FDF3DF'
+        <Wave fill='#ffffff'
           paused={false}
           options={{
             height: 50,
@@ -14,7 +14,7 @@ export default function OpeningHours() {
           }}
         />
       </div>
-      <h1 className="text-5xl ">Åpningstider</h1>
+      <h1 className="text-5xl">Åpningstider</h1>
       <ul className="text-extrafont">
         <li>Mondag: 10-17</li>
         <li>Tirsdag: 10-17</li>
@@ -25,7 +25,7 @@ export default function OpeningHours() {
         <li>Søndag: Stengt</li>
       </ul>
       <div className=" w-screen ">
-          <Wave fill='#FDF3DF'
+          <Wave fill='#ffffff'
             paused={false}
             options={{
               height: 10,
