@@ -3,7 +3,7 @@ import OpenHeader from './OpenHeader.js';
 
 export default function Header() {
     return (
-    <header className=" text-black border-b-2 border-black">
+    <header className=" text-white border-b-2 border-black">
     <div className="flex justify-between items-center p-5">
         <div>
           <Logo /> // Consider making logo into link to '/' or home page

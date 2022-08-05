@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div className="font-display text-xl">
+        <div className="font-display text-xl bg-white">
             <h1 className="flex justify-center p-8 text-4xl font-black">Om Oss</h1>
             <div className="flex flex-col lg:flex-row justify-center items-center">
                 <p className="lg:w-5/12 w-3/4 text-center p-12">Apollon & Afrodite er consectetur adipiscing elit. Nullam accumsan mattis gravida. Integer accumsan tellus eu magna consectetur, quis posuere urna porttitor. Nullam id magna tempus. dolor sit amet, consectetur adipiscing elit.</p>

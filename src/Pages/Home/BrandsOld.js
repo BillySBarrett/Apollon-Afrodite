@@ -1,6 +1,6 @@
 const Brands = () => {
     return (  
-        <div className="flex flex-col items-center -top-12 relative ">
+        <div className="flex flex-col bg-white items-center p-10 relative ">
         
         <h2 className=" lg:text-5xl md:text-4xl text-[5vw] pb-7 ">Vi har sko fra dine favoritt merker</h2>
         <hr className=" px-[45%] border-b-2 m -5 border-black"></hr>

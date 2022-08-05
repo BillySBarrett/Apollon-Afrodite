@@ -1,7 +1,7 @@
 import OpeningHours from './OpeningHours.js';
-import Brands from './Brands.js'
+import Brands from './BrandsOld.js'
 import Landing from './Landing.js'
-
+import NavigateToPages from './NavigateToPages'
 
 
 function Home() {
@@ -9,8 +9,9 @@ function Home() {
   return (
     <div className="bg-#FDF3DF font-display">
       <Landing />
-      <OpeningHours />
-      <Brands />
+      {/* <OpeningHours /> */}
+      <NavigateToPages />
+      {/* <Brands /> */}
     </div>
   );
 }
