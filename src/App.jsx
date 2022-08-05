@@ -14,9 +14,8 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="box-border">
       <NavBar />
-      <Home />
       <Routes>
         <Route path="/Apollon-Afrodite/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -24,7 +23,7 @@ function App() {
         <Route path="/brands" element={<Brands />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
