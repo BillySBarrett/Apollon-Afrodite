@@ -14,8 +14,9 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="box-border">
+    <div className="overflow-x-hidden p-0 m-0">
       <NavBar />
+      <p>1</p>
       <Routes>
         <Route path="/Apollon-Afrodite/" element={<Home />} />
         <Route path="/about" element={<About />} />
