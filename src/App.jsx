@@ -16,12 +16,11 @@ function App() {
   return (
     <div className="overflow-x-hidden p-0 m-0">
       <NavBar />
-      <p>1</p>
       <Routes>
         <Route path="/Apollon-Afrodite/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/brands" element={<Brands />} />
+        <Route path="/Apollon-Afrodite/about" element={<About />} />
+        <Route path="/Apollon-Afrodite/gallery" element={<Gallery />} />
+        <Route path="/Apollon-Afrodite/brands" element={<Brands />} />
       </Routes>
       <Footer />
     </div>

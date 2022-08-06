@@ -27,10 +27,10 @@ const NavigateToPages = () => {
                     Se sessongens beste!
                     </a>
                 </div>
-                <img src="./Summer2022/2.jpeg" className="h-80"></img>
+                <img src="../Summer2022/2.jpeg" className="h-80"></img>
             </div>
             <div className="flex  md:flex-row flex-col-reverse md:justify-evenly justify-center md:h-96 h-[38rem] text-center items-center">
-                <img src="./Summer2022/3.jpeg" className="h-80"></img>
+                <img src="../Summer2022/3.jpeg" className="h-80"></img>
                 <div className=" grid place-items-center place-content-center"> 
                     <h2 className="font-light text-xl">Merker</h2>
                     <p className="w-96 md:pb-10 pt-4">
@@ -51,7 +51,7 @@ const NavigateToPages = () => {
                     Les videre om oss.
                     </a>
                 </div>
-                <img src="./Summer2022/4.jpeg" className="h-80"></img>
+                <img src="../Summer2022/4.jpeg" className="h-80"></img>
             </div>
         </div>
     </div>

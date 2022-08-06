@@ -1,8 +1,8 @@
 export default function Logo() {
   return (
     <svg
-      width="170"
-      height="120"
+      width="130"
+      height="50"
       viewBox="0 0 319 168"
       fill="white"
       xmlns="http://www.w3.org/2000/svg"
