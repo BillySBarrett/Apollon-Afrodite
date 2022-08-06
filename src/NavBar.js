@@ -21,7 +21,7 @@ function NavBar() {
   return (
       <nav className={" text-white " + (isNavExpanded ? "md:bg-gradient-to-b md:from-black md:via-black md:to-transparent bg-black" : "bg-gradient-to-b from-black via-black to-transparent")}>
               <img
-                  src="../images/boots-gallery1.jpeg"
+                  src="./images/boots-gallery1.jpeg"
                   alt="picture of Unisa boots"
                   className=" absolute -z-50 w-screen object-bottom object-cover md:h-[1000px]"
               ></img>
