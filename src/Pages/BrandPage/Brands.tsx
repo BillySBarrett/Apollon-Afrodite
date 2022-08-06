@@ -1,5 +1,8 @@
 const Brands = () => {
-    return <div>Hello World!</div>;
+    return (
+        <div className="bg-white">Hello World!</div>
+    )
+    
 };
 
 export default Brands;
