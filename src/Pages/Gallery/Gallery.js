@@ -22,8 +22,8 @@ export default class Gallery extends Component {
     render() { 
         return (
             <div className="font-display bg-white ">
-                <Tabs className="flex flex-row" selectedTabClassName="border-r-0 bg-sky-200">
-                    <TabList className="w-72 pt-[9.5rem]" >
+                <Tabs className="flex sm:flex-row flex-col" selectedTabClassName="border-r-0 bg-black text-white sm:rounded-r-xl">
+                    <TabList className=" min-w-[3rem] sm:w-96 w-full sm:pt-[9.5rem] pt-[2rem] order-last sm:order-first" >
                         {this.state.seasons.map(sea => {
                             return (
                                 <Tab className=" h-[3rem] flex justify-center items-center text-center border-black " >
@@ -35,15 +35,15 @@ export default class Gallery extends Component {
 
                     </TabList>
 
-                    <div className="w-full">
+                    <div className=" w-fit">
                         <h2 className="flex justify-center pt-10 text-4xl font-bold">Vis fram din stil</h2>
                         <h3 className="flex justify-center pb-10 text-2xl font-light">La oss hjelpe deg</h3>
                         {this.state.seasons.map(sea => {
                                 return (
-                                <TabPanel className=" grid gap-2 grid-rows-2 justify-items-center mr-5 grid-span-2 grid-flow-col  ">
+                                <TabPanel className="flex flex-wrap justify-center gap-1">
                                     {sea.pictures.map(picture => {
                                         return (
-                                            <img src={picture} alt={picture} className="h-96"></img>
+                                            <img src={picture} alt={picture} className=" h-96 "></img>
                                         )        
                                     })}
                                 </TabPanel>

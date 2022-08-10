@@ -1,10 +1,12 @@
 import Wave from 'react-wavify';
 
+
+
 const NavigateToPages = () => {
   return (
     <div className="bg-white relative top-20 z-1">
         <div className="">
-            <div className="w-screen h-0 absolute -top-36 ">
+            <div className="w-[150vw] h-0 absolute -top-36 ">
                 {/* change the amplitude and speed using conditional rendering */}
                 <Wave fill='white'
                 paused={false}
