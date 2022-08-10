@@ -2,45 +2,42 @@ import Logo from "./LogoBlack.js";
 
 function Footer() {
   return (
-    <div className="bg-white flex flex-row font-light border-black border-t-2 justify-evenly relative z-50 p-5">
-      <div className=" justify-center">
+    <div className="bg-white flex md:flex-row flex-col md:gap-14 justify-center font-light border-black border-t-2 relative z-50 p-5">
+      <div className=" flex justify-center">
         <Logo />
       </div>
-      <div className="flex flex-col gap-2 justify-center justify-items-start">
-        <a href="/" className="hover:underline">
+      <div className="flex md:flex-col gap-2 justify-center justify-items-start">
+        <a href="/Apollon-Afrodite/" className="hover:underline">
           Hjem
         </a>
-        <a href="/gallery" className="hover:underline">
+        <a href="/Apollon-Afrodite/gallery" className="hover:underline">
           Galleri
         </a>
-        <a href="/about" className="hover:underline">
+        <a href="/Apollon-Afrodite/about" className="hover:underline">
           Om Oss
         </a>
-        <a href="/brands" className="hover:underline">
+        <a href="/Apollon-Afrodite/brands" className="hover:underline">
           Merker
         </a>
       </div>
-      <div className="grid grid-col-1 gap-2">
-        <h2 className="text-xl ">Kontakt Oss</h2>
-        <div>
-          <p>990 20 149</p>
-        </div>
-        <div>
-          <p>apo.afro@online.no</p>
-        </div>
-        <div>
-          <p>Torget 1A, 3210 Sandefjord</p>
+      <div className="Sosiale medier text-center items-center pt-5">
+        <p className="text-xl font-bold">Våre sosiale medier</p>
+        <div className="flex gap-10 justify-center p-4">
+          <a href="https://www.instagram.com/apollon_afrodite/">
+            <ion-icon name="logo-instagram" size="large"></ion-icon>
+          </a>
+          <a href="https://www.facebook.com/apollonafrodite">
+            <ion-icon name="logo-facebook" size="large"></ion-icon>
+          </a>
         </div>
       </div>
-      <div className="Sosiale medier">
-        <p className="text-xl">Våre sosiale medier</p>
-        <a href="https://www.instagram.com/apollon_afrodite/">
-          {/* <img src="" alt="instagram" className=""></img> */}
-        </a>
-          <logoInstagram className="bg-purple-100"/>
-        <a href="https://www.facebook.com/apollonafrodite">
-          s
-        </a>
+      <div className="grid grid-col-1 gap-2 text-center">
+        <h2 className="text-xl font-bold ">Kontakt Oss</h2>
+        <div>
+          <p>Torget 1A, 3210 Sandefjord</p>
+          <p>Tlf: 990 20 149</p>
+          <p>E-post: apo.afro@online.no</p>
+        </div>
       </div>
     </div>
   );

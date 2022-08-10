@@ -3,10 +3,10 @@ const Brands = () => {
     const brandsList = ["Arche","Art","Aurlandsko","Billi Bi","Blunddstone","Brunate","Camper","Clarks Originals","Dr.Martens","Fit Flop","Gait Line","Hunter","Hógl","Inuikii","KMB","Kanna","Kastel","Lemon Jelly","Liverpool","Nahlo","Nude","Panama Jack","Philip Hóg","Primeboots","R.M.Williams","Sleepers","Stewart Weitzman","Superga","Swims","Toms","Ugg","Unisa"];
     const alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
         return (
-        <div className="bg-white font-display">
-            <h1 className="flex justify-center p-10 text-4xl font-bold">Våre merker</h1>
+        <div className="bg-white font-display grid justify-center">
+            <h1 className="text-center p-10 text-4xl font-bold">Våre merker</h1>
 
-            <div className="flex-wrap justify-center flex">
+            <div className="flex-wrap justify-center flex max-w-5xl">
                 {alphabetArray.map(alphChar => {
 
                     const brandsBeginWithChar = [];

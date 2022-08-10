@@ -35,7 +35,7 @@ export default class Gallery extends Component {
 
                     </TabList>
 
-                    <div className=" w-fit">
+                    <div className="w-fit">
                         <h2 className="flex justify-center pt-10 text-4xl font-bold">Vis fram din stil</h2>
                         <h3 className="flex justify-center pb-10 text-2xl font-light">La oss hjelpe deg</h3>
                         {this.state.seasons.map(sea => {
