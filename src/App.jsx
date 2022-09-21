@@ -1,11 +1,11 @@
 import React from "react";
 
-import NavBar from "./NavBar.js";
-import Footer from "./Footer.js";
+import NavBar from "./CommonComponents/NavBar.js";
+import Footer from "./CommonComponents/Footer.js";
 
 import Home from "./Pages/Home/Home.jsx";
-import About from "./Pages/About.js";
-import Gallery from "./Pages/Gallery/Gallery.js";
+import About from "./Pages/About/About";
+import Gallery from "./Pages/Gallery/Gallery.jsx";
 import Brands from "./Pages/BrandPage/Brands.tsx";
 
 import { Routes, Route } from "react-router-dom";

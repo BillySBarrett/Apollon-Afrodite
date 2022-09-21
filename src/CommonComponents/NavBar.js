@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 
 //IMAGES
-import bootsgallery1 from './images/boots-gallery1.jpeg';
+import bootsgallery1 from '../images/boots-gallery1.jpeg';
 
   // className={yourItem === value ? 'your-class' : 'or-default-to'}
 

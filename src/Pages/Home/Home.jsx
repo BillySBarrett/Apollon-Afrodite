@@ -1,5 +1,3 @@
-import OpeningHours from './OpeningHours.js';
-import Brands from './BrandsOld.js'
 import Landing from './Landing.js'
 import NavigateToPages from './NavigateToPages'
 

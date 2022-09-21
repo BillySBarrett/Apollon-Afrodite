@@ -57,7 +57,7 @@ const NavigateToPages = () => {
                                     {page.linkText}
                                 </a>
                             </div>
-                            <img src={page.imagePath} className={((page.id % 2===0) ? "w-80 md:order-first" : "w-80")}></img>
+                            <img src={page.imagePath} alt={page.title} className={((page.id % 2===0) ? "w-80 md:order-first" : "w-80")}></img>
                         </div>
                     );
                 })}

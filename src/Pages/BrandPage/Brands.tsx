@@ -1,3 +1,5 @@
+import React from "react";
+
 const Brands = () => {
 
     const brandsList = ["Arche","Art","Aurlandsko","Billi Bi","Blunddstone","Brunate","Camper","Clarks Originals","Dr.Martens","Fit Flop","Gait Line","Hunter","Hógl","Inuikii","KMB","Kanna","Kastel","Lemon Jelly","Liverpool","Nahlo","Nude","Panama Jack","Philip Hóg","Primeboots","R.M.Williams","Sleepers","Stewart Weitzman","Superga","Swims","Toms","Ugg","Unisa"];
