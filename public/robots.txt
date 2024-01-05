@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/cron
+Disallow: /studio
+
+User-agent: *
+Allow: /

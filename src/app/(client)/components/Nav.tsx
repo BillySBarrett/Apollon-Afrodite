@@ -49,7 +49,7 @@ const NavbarDefault = () => {
           <>
             <div
               className={`bg-gradient-to-b from-black from-50% ${
-                open ? "bg-black" : ""
+                open ? "bg-black sm:bg-transparent" : ""
               }`}
             >
               <div className="flex h-32 px-4 sm:px-6 lg:px-8 justify-between">
@@ -116,28 +116,28 @@ const NavbarDefault = () => {
                 {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/"
                   className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-cyan-200 hover:bg-gray-50 hover:text-cyan-700"
                 >
                   Home
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/about"
                   className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-cyan-200 hover:bg-gray-50 hover:text-cyan-700"
                 >
                   Om oss
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/brands"
                   className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-cyan-200 hover:bg-gray-50 hover:text-cyan-700"
                 >
                   Merker
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/gallery"
                   className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-cyan-200 hover:bg-gray-50 hover:text-cyan-700"
                 >
                   Galleri
