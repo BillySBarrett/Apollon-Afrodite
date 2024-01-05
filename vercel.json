@@ -1,0 +1,8 @@
+{
+  "edge-functions": {
+    "fetch-instagram-cron": {
+      "path": "/api/cron/instagram",
+      "schedule": "0 0 * * 0"
+    }
+  }
+}
