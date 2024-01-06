@@ -1,13 +1,5 @@
 import React from "react";
 
-// const client = createClient({
-//   projectId: "yp0g8jjw", // Replace with your project ID
-//   dataset: "collection", // Replace with your dataset name
-//   token:
-//     "skYrejLD51RNgvYF43IdJwp1JpnhKQWceTdINxoRh7Mr5l3yzXymYlPB0LlPRP4ijI9fX8ZjPI7u1Khidn3lz9ugEXdaDfoXDoCyvUsrKWWegK2HnQRfonbpolgFIUX3tvyz5dSNzrNSJTNQYRgF23iBqVlcrILfNZllkZdWazLZ3f8XZoqK", // Replace with your Sanity write token
-//   useCdn: false,
-// });
-
 const Brands = () => {
   const brandsList = [
     "Arche",
@@ -78,24 +70,6 @@ const Brands = () => {
           }
         })}
       </div>
-
-      {/* {alphabetArray.map(alphChar => {
-                return (
-                <div className="flex flex-col justify-center">
-                    <p>{alphChar}</p>
-                    <ul>
-                        {brandsList.map(brand => {
-                            if (alphChar.toUpperCase() === brand.charAt(0)){
-                                return (
-                                    <li>{brand}</li>
-                                )        
-                            }
-                        })}
-
-                    </ul>
-                </div>
-                );
-            })} */}
     </div>
   );
 };

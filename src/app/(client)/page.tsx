@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-import Wave from "react-wavify";
 
 const Page = () => {
   return (

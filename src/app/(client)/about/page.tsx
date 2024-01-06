@@ -1,12 +1,5 @@
 "use client";
-// import GoogleApiWrapper from "./GoogleApiWrapper";
-import {
-  APIProvider,
-  AdvancedMarker,
-  Map,
-  Marker,
-  Pin,
-} from "@vis.gl/react-google-maps";
+import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 
 function About() {
   return (
