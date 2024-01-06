@@ -1,36 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-// const Navbar = () => {
-//     const [openNav, setOpenNav] = useState(false);
-
-//     useEffect(() => {
-//       window.addEventListener(
-//         "resize",
-//         () => window.innerWidth >= 960 && setOpenNav(false),
-//       );
-//     }, []);
-
-//   return (
-//     <>
-<div className="h-[30rem] -z-50 w-screen absolute overflow-y-hidden">
-  <Image
-    src={"/images/boots-gallery1.jpeg"}
-    width={1000}
-    height={1000}
-    alt="Unisa boots"
-    className="w-screen object-bottom object-cover md:h-[1000px]"
-  />
-</div>;
-//     </>
-//   );
-// };
-
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const NavbarDefault = () => {
   return (
@@ -53,8 +25,8 @@ const NavbarDefault = () => {
               }`}
             >
               <div className="flex h-32 px-4 sm:px-6 lg:px-8 justify-between">
-                <div className="flex">
-                  <div className="flex flex-shrink-0 items-center">
+                <Link href="/" className="flex">
+                  <div className="flex items-center">
                     <Image
                       width={0}
                       height={0}
@@ -63,7 +35,7 @@ const NavbarDefault = () => {
                       alt="Your Company"
                     />
                   </div>
-                </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:flex sm:items-center">
                   <div className="hidden sm:ml-6 sm:flex sm:space-x-8 text-white">
                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
@@ -110,7 +82,7 @@ const NavbarDefault = () => {
             </div>
 
             <Disclosure.Panel
-              className={`absolute w-screen sm:hidden bg-gradient-to-b from-black from-80% pb-10`}
+              className={`absolute w-screen sm:hidden bg-gradient-to-b from-black from-80% pb-10 z-50`}
             >
               <div className="space-y-1 pb-3 pt-2">
                 {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}

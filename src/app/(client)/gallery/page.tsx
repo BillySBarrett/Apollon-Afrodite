@@ -68,23 +68,23 @@ const Gallery = () => {
             ))}
           </ul>
         </nav>
-        <div className="max-w-2xl">
+        <div className=" max-w-2xl">
           {loading ? (
             <div className="flex h-screen justify-center items-center">
               <p>Loading...</p>
             </div>
           ) : (
             <Carousel
-              className="rounded-xl md:h-[40rem] md:w-[40rem] w-full h-full bg-gradient-to-br from-gray-100 to-gray-600"
+              className="rounded-xl md:h-[40rem] md:w-[40rem] overflow-x-hidden w-full h-full bg-gradient-to-br from-gray-100 to-gray-600"
               placeholder={undefined}
               key={activeTab}
               loop
               navigation={({ setActiveIndex, activeIndex, length }) => (
-                <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                <div className="-z-10 absolute bottom-4 left-2/4  flex -translate-x-2/4 gap-2">
                   {new Array(length).fill("").map((_, i) => (
                     <span
                       key={i}
-                      className={`block h-2 cursor-pointer rounded-2xl transition-all content-[''] ${
+                      className={`-z-10 block h-2 cursor-pointer rounded-2xl transition-all content-[''] ${
                         activeIndex === i
                           ? "w-12 bg-gradient-to-br from-cyan-100 to-cyan-400"
                           : "w-6 bg-white hover:bg-gray-300"
@@ -97,7 +97,10 @@ const Gallery = () => {
             >
               {seasonImages[0]?.imageUrls.length > 0 ? (
                 seasonImages[0]?.imageUrls.map((imageUrl) => (
-                  <div key={imageUrl} className="flex h-full justify-center">
+                  <div
+                    key={imageUrl}
+                    className="-z-10 flex h-full justify-center"
+                  >
                     <Image
                       src={imageUrl}
                       alt="Gallery Image"
