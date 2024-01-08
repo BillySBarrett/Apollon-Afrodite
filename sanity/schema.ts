@@ -3,7 +3,7 @@ import { type SchemaTypeDefinition } from "sanity";
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     {
-      name: "season",
+      name: "seasonImgs",
       title: "Season Images",
       type: "document",
       fields: [

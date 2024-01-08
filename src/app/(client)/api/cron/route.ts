@@ -24,64 +24,71 @@ export async function GET(req: NextRequest) {
     const userFeed = ig.feed.user(targetUserId);
 
     const photos = [];
-    let item = await userFeed.items();
-    while (item.length > 0 && photos.length < 15) {
-      const imageUrl = item[0].image_versions2.candidates[0].url;
-      const timestamp = item[0].taken_at;
+    while (photos.length < 30) {
+      let items = await userFeed.items();
+      if (items.length === 0) break;
 
-      // Fetch the image from the URL
-      const response = await fetch(imageUrl);
-      if (!response.ok)
-        throw new Error(`Failed to fetch image: ${response.statusText}`);
-      const arrayBuffer = await response.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
+      for (let i = 0; i < items.length; i++) {
+        console.log("Processing item: ", i);
+        const imageUrl = items[i].image_versions2.candidates[0].url;
+        const timestamp = items[i].taken_at;
 
-      const date = new Date(timestamp * 1000);
+        // Fetch the image from the URL
+        const response = await fetch(imageUrl);
+        if (!response.ok)
+          throw new Error(`Failed to fetch image: ${response.statusText}`);
+        const arrayBuffer = await response.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
 
-      const query = `*[_type == "season" && seasonName == "${getSeason(
-        date
-      )}"]`;
-      const existingDocs = await client.fetch(query);
+        const date = new Date(timestamp * 1000);
 
-      let docId;
-      if (existingDocs.length > 0) {
-        // Document exists, so we'll update it
-        docId = existingDocs[0]._id;
-      } else {
-        // Create a new document for this season and year
-        const newDoc = {
-          _type: "season",
-          seasonName: getSeason(date),
-          images: [],
-        };
-        const createdDoc = await client.create(newDoc);
-        docId = createdDoc._id;
-      }
+        const query = `*[_type == "seasonImgs" && seasonName == "${getSeason(
+          date
+        )}"]`;
+        const existingDocs = await client.fetch(query);
+        console.log("Existing docs: ", existingDocs);
 
-      // Upload the image buffer to Sanity
-      const imageAsset = await client.assets.upload("image", buffer, {
-        filename: `image-${timestamp}.jpg`,
-        contentType: "image/jpeg",
-      });
+        let docId;
+        if (existingDocs.length > 0) {
+          // Document exists, so we'll update it
+          docId = existingDocs[0]._id;
+        } else {
+          // Create a new document for this season and year
+          const newDoc = {
+            _type: "seasonImgs",
+            seasonName: getSeason(date),
+            images: [],
+          };
+          const createdDoc = await client.create(newDoc);
+          docId = createdDoc._id;
+        }
 
-      console.log("uploading to: ", docId);
+        // Upload the image buffer to Sanity
+        const imageAsset = await client.assets.upload("image", buffer, {
+          filename: `image-${timestamp}.jpg`,
+          contentType: "image/jpeg",
+        });
 
-      const result = await client
-        .patch(docId)
-        .append("images", [
-          {
-            _type: "image",
-            asset: {
-              _type: "reference",
-              _ref: imageAsset._id,
+        console.log("Image asset: ", imageAsset);
+
+        const result = await client
+          .patch(docId)
+          .append("images", [
+            {
+              _type: "image",
+              asset: {
+                _type: "reference",
+                _ref: imageAsset._id,
+              },
+              _key: imageAsset._id,
             },
-            _key: imageAsset._id,
-          },
-        ])
-        .commit();
+          ])
+          .commit();
+        console.log("Result: ", result);
 
-      photos.push({ url: imageUrl, timestamp, date });
-      item = await userFeed.items();
+        photos.push({ url: imageUrl, timestamp, date });
+        if (photos.length >= 15) break;
+      }
     }
 
     return new Response(JSON.stringify(photos), {
@@ -91,7 +98,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+    return new Response(JSON.stringify({ error: error }), {
       status: 500,
       headers: {
         "Content-Type": "application/json",
